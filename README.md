@@ -253,8 +253,8 @@ $ npx moocauto                 ## Pasa los tests al fichero a entregar
 Se puede pasar la herramienta de autocorrección tantas veces como se desee.
 
 
-RÚBRICA: La resolución de cada uno de estos puntos dará un el % indicado de la nota total: 
- - 10%:  Existe el repositorio my_calculator
- - 20%:  El primer commit de la rama master el original:    f6e660e Add John tf
- - 35%:  El segundo commit de master es "Add Eva tf    integrated" y contiene los 2 originales integrados
- - 35%:  El tercer commit de master es "Add Mary tf   fixed" y contiene el original corregido
+**RÚBRICA:** La resolución de cada uno de estos puntos dará un el % indicado de la nota total: 
+ * **10%:**  Existe el repositorio my_calculator
+ * **20%:**  El primer commit de la rama master el original:    f6e660e Add John tf
+ * **35%:**  El segundo commit de master es "Add Eva tf    integrated" y contiene los 2 originales integrados
+ * **35%:**  El tercer commit de master es "Add Mary tf   fixed" y contiene el original corregido
