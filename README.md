@@ -15,7 +15,7 @@
 
 En esta práctica vamos a duplicar el repositorio [https://github.com/ging-moocs/MOOC_git_mod6-tf_agenda](https://github.com/ging-moocs/MOOC_git_mod6-tf_agenda) haciendo un "fork" en su cuenta de GitHub y clonarlo en un directorio local del mismo nombre. Este repositorio contiene solo el fichero tf-agenda.txt con texto plano. Es una agenda telefónica muy sencilla, con 3 teléfonos, creada en 4 commits, cuyo único objetivo es practicar con "git rebase --interactive ..."
 
-*Contenido de la agenta*
+*Contenido de la agenda*
 ```
 $ cat tf_agenda.txt 
   John: 913-677-899;
@@ -64,7 +64,7 @@ Lo primero que debemos hacer es copiar el repositorio [https://github.com/ging-m
 A continuación clonamos el repositorio copiado en nuestro ordenador
 
 ```
-$ git clone  https://github.com/<mi_usuario_de_github>/tf_agenda 
+$ git clone  https://github.com/<mi_usuario_de_github>/MOOC_git_mod6-tf_agenda 
 ```
 
 ### Paso 4: Juntar los commits 2 y 3 en uno solo
@@ -202,7 +202,7 @@ $ git log --online
 Si alguna vez se equivoca uno al rehacer una rama, se puede utilizar el reflog para arreglarlo: [https://git-scm.com/docs/git-reflog](https://git-scm.com/docs/git-reflog).
 
 
-### Paso 4: Subir los cambios a una nueva rama
+### Paso 5: Subir los cambios a una nueva rama
 Para finalizar, vamos a subir la rama "master" local (regenerada) a la rama "corrected_tf_agenda" del repositorio origin, la cual se creará porque no existe. El repositorio "origin" en Github tendrá ahora tanto la rama master, como la nueva "corrected_tf_agenda".
 
 ```
@@ -270,7 +270,7 @@ Dado que es un curso para principiantes, ante la duda les pedimos que sean benev
 **OJO! Una vez enviada la evaluación, está no se puede cambiar.** Piensen bien su evaluación antes de enviarla.
 
 **RÚBRICA:** La resolución de cada uno de estos puntos dará un el % indicado de la nota total: 
- * **10%:**  Existe el repositorio my_calculator
- * **20%:**  El primer commit de la rama master el original:    f6e660e Add John tf
- * **35%:**  El segundo commit de master es "Add Eva tf    integrated" y contiene los 2 originales integrados
- * **35%:**  El tercer commit de master es "Add Mary tf   fixed" y contiene el original corregido
+ * **10%:**  Existe el repositorio **MOOC_git_mod6-tf_agenda**
+ * **20%:**  El primer commit de la rama **corrected_tf_agenda** el original:    f6e660e Add John tf
+ * **35%:**  El segundo commit de la rama **corrected_tf_agenda** es "Add Eva tf    integrated" y contiene los 2 originales integrados
+ * **35%:**  El tercer commit de la rama **corrected_tf_agenda** es "Add Mary tf   fixed" y contiene el original corregido
