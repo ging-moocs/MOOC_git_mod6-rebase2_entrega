@@ -59,7 +59,7 @@ Finalizar subiendo la rama master local (regenerada) a la rama corrected_tf_agen
 
 Lo primero que debemos hacer es copiar el repositorio [https://github.com/ging-moocs/MOOC_git_mod6-tf_agenda](https://github.com/ging-moocs/MOOC_git_mod6-tf_agenda) en nuestra cuenta. Para ello hacemos click sobre el botón "Fork" que se muestra en la web de Github en la esquina superior derecha de la página del repositorio.
 
-### Paso 3: Clonar el repositorio
+### Paso 2: Clonar el repositorio
 
 A continuación clonamos el repositorio copiado en nuestro ordenador
 
@@ -67,7 +67,7 @@ A continuación clonamos el repositorio copiado en nuestro ordenador
 $ git clone  https://github.com/<mi_usuario_de_github>/MOOC_git_mod6-tf_agenda 
 ```
 
-### Paso 4: Juntar los commits 2 y 3 en uno solo
+### Paso 3: Juntar los commits 2 y 3 en uno solo
 
 Ahora vamos a utilizar "git rebase --interactive f6e660e" para juntar los commits 2 (1204dc8 Add Eva pending-tf) y 3 (71e69ce Add Eva tf) en uno solo, y corregir el teléfono de Mary (918-789-221) por el número 918-555-555. 
 
@@ -202,7 +202,7 @@ $ git log --online
 Si alguna vez se equivoca uno al rehacer una rama, se puede utilizar el reflog para arreglarlo: [https://git-scm.com/docs/git-reflog](https://git-scm.com/docs/git-reflog).
 
 
-### Paso 5: Subir los cambios a una nueva rama
+### Paso 4: Subir los cambios a una nueva rama
 Para finalizar, vamos a subir la rama "master" local (regenerada) a la rama "corrected_tf_agenda" del repositorio origin, la cual se creará porque no existe. El repositorio "origin" en Github tendrá ahora tanto la rama master, como la nueva "corrected_tf_agenda".
 
 ```
