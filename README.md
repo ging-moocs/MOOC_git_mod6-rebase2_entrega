@@ -202,8 +202,9 @@ $ git log --online
 Si alguna vez se equivoca uno al rehacer una rama, se puede utilizar el reflog para arreglarlo: [https://git-scm.com/docs/git-reflog](https://git-scm.com/docs/git-reflog).
 
 
-### Paso 5: Subir los cambios a una nueva rama
-Para finalizar, vamos a subir la rama "main" local (regenerada) a la rama "corrected_tf_agenda" del repositorio origin, la cual se creará porque no existe. El repositorio "origin" en Github tendrá ahora tanto la rama main, como la nueva "corrected_tf_agenda".
+
+### Paso 4: Subir los cambios a una nueva rama
+Para finalizar, vamos a subir la rama "master" local (regenerada) a la rama "corrected_tf_agenda" del repositorio origin, la cual se creará porque no existe. El repositorio "origin" en Github tendrá ahora tanto la rama master, como la nueva "corrected_tf_agenda".
 
 ```
 $ git checkout -b corrected_tf_agenda
