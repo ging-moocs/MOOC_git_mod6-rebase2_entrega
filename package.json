@@ -4,10 +4,10 @@
     "license": "GNU",
     "version": "0.0.0",
     "info": {
-        "githubURL": "ging-moocs/MOOC_git_mod5-rebase2_entrega",
-        "serverUrl": "https://autocorector.dit.upm.es/",
-        "courseId": "3",
-        "assignmentId": "15"
+        "githubURL": "ging-moocs/MOOC_git_mod6-rebase2_entrega",
+        "serverUrl": "https://moocauto.dit.upm.es/",
+        "courseId": "451",
+        "assignmentId": "248"
     },
     "dependencies": {
         "underscore": "*",

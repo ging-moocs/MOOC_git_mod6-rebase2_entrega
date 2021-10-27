@@ -5,7 +5,7 @@
 
 // IMPORTS
 const git = require('simple-git/promise');
-const Utils = require("./utils");
+const Utils = require("./testutils");
 const to = require("./to");
 const path = require('path');
 const fs = require('fs-extra');
@@ -40,13 +40,13 @@ describe('Rebase 2', function () {
         should.exist(student);
     });
 
-    it("Buscando la rama 'master'", async function () {
+    it("Buscando la rama 'main'", async function () {
         this.score = 1;
-        this.msg_ok = `Encontrada la rama 'master' en ${REPO_URL}`;
+        this.msg_ok = `Encontrada la rama 'main' en ${REPO_URL}`;
         [_, _] = await to(fs.remove(PATH_REPO));
         [error_repo, _] = await to(mygit.clone(REPO_URL));
         if (error_repo) {
-            this.msg_err = `Rama 'master' no encontrada en ${REPO_URL}.\n\t\tError: >>${error_repo}<<`;
+            this.msg_err = `Rama 'main' no encontrada en ${REPO_URL}.\n\t\tError: >>${error_repo}<<`;
             error_critical = this.msg_err;
         }
         await to(mygit.cwd(PATH_REPO));
