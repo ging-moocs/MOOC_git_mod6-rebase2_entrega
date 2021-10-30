@@ -1,13 +1,31 @@
-/*
-  Common utilities for all assignments
- */
-
-const _ = require("underscore");
-const Utils = {};
+const fs = require('fs').promises;
+const path = require("path");
 
 const REG_URL = /(\b(http|ftp|https|ftps):\/\/[-A-ZáéíóúÁÉÍÓÚ0-9+&@#\/%?=~_|!:,.;]*[-A-ZáéíóúÁÉÍÓÚ0-9+&@#\/%=~_|])/ig;
 
-Utils.getURL = (string) => {
+const TestUtils = {};
+
+
+TestUtils.checkFileExists = (filepath) => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      await fs.access(filepath, fs.F_OK);
+      resolve(true);
+    } catch (err) {
+      resolve(false);
+    }
+  });
+};
+
+TestUtils.to = (promise) => {
+    return promise
+        .then(data => {
+            return [null, data];
+        })
+        .catch(err => [err]);
+};
+
+TestUtils.getURL = (string) => {
     const urls = string.match(REG_URL);
     let url = null;
     if (urls instanceof Array) {
@@ -16,41 +34,41 @@ Utils.getURL = (string) => {
     return url;
 };
 
-Utils.exists = (thing) => {
-    return !_.isUndefined(thing) && !_.isNull(thing);
+TestUtils.exists = (thing) => {
+    return thing!==undefined && thing!==null;
 };
 
-Utils.isString = (thing) => {
-    return _.isString(thing);
+TestUtils.isString = (thing) => {
+    return typeof thing === 'string' || thing instanceof String;
 };
 
-Utils.isObject = (thing) => {
-    return _.isObject(thing);
+TestUtils.isObject = (thing) => {
+    return typeof thing === 'object' || thing instanceof Object;
 };
 
-Utils.isNumber = (thing) => {
+TestUtils.isNumber = (thing) => {
     let number = false;
-    if (Utils.exists(thing)) {
+    if (TestUtils.exists(thing)) {
         number = typeof parseInt(thing) === "number";
     }
     return number
 };
 
-Utils.isArray = (thing) => {
-    return _.isArray(thing);
+TestUtils.isArray = (thing) => {
+    return typeof thing === 'array' || thing instanceof Array;
 };
 
-Utils.isURL = (thing) => {
-    if (Utils.isString(thing)) {
+TestUtils.isURL = (thing) => {
+    if (TestUtils.isString(thing)) {
         return REG_URL.test(thing);
     }
 };
 
-Utils.isRegExp = (thing) => {
+TestUtils.isRegExp = (thing) => {
     return (thing instanceof RegExp);
 };
 
-Utils.isJSON = (thing) => {
+TestUtils.isJSON = (thing) => {
     try {
         JSON.parse(thing);
         return true;
@@ -59,28 +77,28 @@ Utils.isJSON = (thing) => {
     }
 };
 
-Utils.search = (b, a) => {
-    if (Utils.isRegExp(b)) {
-        if (Utils.isString(a) && a.length > 0) {
+TestUtils.search = (b, a) => {
+    if (TestUtils.isRegExp(b)) {
+        if (TestUtils.isString(a) && a.length > 0) {
             return b.test(a);
         } else {
             return false;
         }
     } else {
-        if (Utils.isArray(a)) {
+        if (TestUtils.isArray(a)) {
             let result = false;
             for (let item in a) {
-                if (Utils.search(b, a[item])) {
+                if (TestUtils.search(b, a[item])) {
                     result = true;
                 }
             }
             return result;
         } else {
-            if (Utils.isString(a.toString())) {
+            if (TestUtils.isString(a.toString())) {
                 return (a.toString().toLowerCase().indexOf(b.toLowerCase()) > -1);
             }
         }
     }
 };
 
-module.exports = Utils;
+module.exports = TestUtils;

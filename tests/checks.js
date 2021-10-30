@@ -1,12 +1,6 @@
-/**
- * Checker Script for mooc_git-entrega3_rebase2
- */
-
-
 // IMPORTS
 const git = require('simple-git/promise');
 const Utils = require("./testutils");
-const to = require("./to");
 const path = require('path');
 const fs = require('fs-extra');
 
@@ -43,13 +37,13 @@ describe('Rebase 2', function () {
     it("Buscando la rama 'main'", async function () {
         this.score = 1;
         this.msg_ok = `Encontrada la rama 'main' en ${REPO_URL}`;
-        [_, _] = await to(fs.remove(PATH_REPO));
-        [error_repo, _] = await to(mygit.clone(REPO_URL));
+        [_, _] = await Utils.to(fs.remove(PATH_REPO));
+        [error_repo, _] = await Utils.to(mygit.clone(REPO_URL));
         if (error_repo) {
             this.msg_err = `Rama 'main' no encontrada en ${REPO_URL}.\n\t\tError: >>${error_repo}<<`;
             error_critical = this.msg_err;
         }
-        await to(mygit.cwd(PATH_REPO));
+        await Utils.to(mygit.cwd(PATH_REPO));
         should.not.exist(error_repo);
     });
 
@@ -62,7 +56,7 @@ describe('Rebase 2', function () {
         } else {
             let output;
             this.msg_ok = `Encontrada la rama ${BRANCH_NAME}`;
-            [error_branch, branches] = await to(mygit.branch());
+            [error_branch, branches] = await Utils.to(mygit.branch());
             if (error_branch) {
                 this.msg_err = `Error al leer las ramas en ${REPO_URL}`;
                 error_critical = this.msg_err;
@@ -88,9 +82,9 @@ describe('Rebase 2', function () {
             this.msg_err = error_critical;
             should.not.exist(error_critical);
         } else {
-            await to(mygit.checkout(BRANCH_NAME));
+            await Utils.to(mygit.checkout(BRANCH_NAME));
 
-            [error_log, log] = await to(mygit.log());
+            [error_log, log] = await Utils.to(mygit.log());
             if (error_log) {
                 this.msg_err = `Error al leer los logs de ${REPO_URL}`;
                 error_critical = this.msg_err;
@@ -118,7 +112,7 @@ describe('Rebase 2', function () {
             this.msg_err = error_critical;
             should.not.exist(error_critical);
         } else {
-            [err_show, output] = await to(mygit.show([commit_1]));
+            [err_show, output] = await Utils.to(mygit.show([commit_1]));
             this.msg_ok = `Se ha encontrado '${expected}' en la rama '${BRANCH_NAME}' commit ${commit_1}`;
             this.msg_err = `NO se ha encontrado '${expected}' en la rama '${BRANCH_NAME}' commit ${commit_1}`;
             Utils.search(expected, output).should.be.equal(true);
@@ -132,7 +126,7 @@ describe('Rebase 2', function () {
             this.msg_err = error_critical;
             should.not.exist(error_critical);
         } else {
-            [err_show, output] = await to(mygit.show([commit_2]));
+            [err_show, output] = await Utils.to(mygit.show([commit_2]));
             this.msg_ok = `Se ha encontrado '${expected}' en la rama '${BRANCH_NAME}' commit ${commit_2}`;
             this.msg_err = `NO se ha encontrado'${expected}' en la rama '${BRANCH_NAME}' commit ${commit_2}`;
             Utils.search(expected, output).should.be.equal(true);
@@ -146,7 +140,7 @@ describe('Rebase 2', function () {
             this.msg_err = error_critical;
             should.not.exist(error_critical);
         } else {
-            [err_show, output] = await to(mygit.show([commit_3]));
+            [err_show, output] = await Utils.to(mygit.show([commit_3]));
             this.msg_ok = `Se ha encontrado '${expected}' en la rama '${BRANCH_NAME}' commit ${commit_3}`;
             this.msg_err = `NO se ha encontrado'${expected}' en la rama '${BRANCH_NAME}' commit ${commit_3}`;
             Utils.search(expected, output).should.be.equal(true);
