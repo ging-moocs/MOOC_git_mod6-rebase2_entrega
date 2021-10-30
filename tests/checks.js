@@ -34,13 +34,13 @@ describe('Rebase 2', function () {
         should.exist(student);
     });
 
-    it("Buscando la rama 'main'", async function () {
+    it("Buscando la rama 'master'", async function () {
         this.score = 1;
-        this.msg_ok = `Encontrada la rama 'main' en ${REPO_URL}`;
+        this.msg_ok = `Encontrada la rama 'master' en ${REPO_URL}`;
         [_, _] = await Utils.to(fs.remove(PATH_REPO));
         [error_repo, _] = await Utils.to(mygit.clone(REPO_URL));
         if (error_repo) {
-            this.msg_err = `Rama 'main' no encontrada en ${REPO_URL}.\n\t\tError: >>${error_repo}<<`;
+            this.msg_err = `Rama 'master' no encontrada en ${REPO_URL}.\n\t\tError: >>${error_repo}<<`;
             error_critical = this.msg_err;
         }
         await Utils.to(mygit.cwd(PATH_REPO));
