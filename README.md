@@ -4,7 +4,7 @@
 
 <br/><br/><br/>
 
-# Módulo 6: Colaboración mediante GitHub, bifurcación de repositorios, rama local, ramas remotas y rastreo de ramas, refspecs y comandos: clone, fetch, push, branch y checkout - Entrega P2P: Rebase 2
+# Módulo 6: Colaboración mediante GitHub - Entrega P2P: Rebase 2
 
 ## Objetivos
  * Ver nuevos usos de GitHub y de "git rebase"
@@ -247,7 +247,7 @@ $ npx autocorector             ## Pasa los tests al fichero a entregar
 ... (resultado de los tests)
 ```
 
-Se puede pasar la herramienta de autoorrección tantas veces como se desee sin ninguna repercusión en la calificación.
+Se puede pasar la herramienta de autocorrección tantas veces como se desee sin ninguna repercusión en la calificación.
 
 ## Instrucciones para la Entrega y Evaluación.
 
