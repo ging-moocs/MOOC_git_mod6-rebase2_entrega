@@ -65,6 +65,7 @@ A continuación clonamos el repositorio copiado en nuestro ordenador
 
 ```
 $ git clone  git@github.com:<mi_usuario_de_github>/MOOC_git_mod6-tf_agenda 
+$ cd MOOC_git_mod6-tf_agenda 
 ```
 
 ### Paso 3: Juntar los commits 2 y 3 en uno solo
