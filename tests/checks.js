@@ -35,7 +35,7 @@ describe('Rebase 2', function () {
         this.msg_err = "No se ha encontrado el fichero 'git_account' que debe contener el nombre de usuario de github";
 
         student = fs.readFileSync(path.join(PATH_ASSIGNMENT, 'git_account'), {encoding: 'utf8'}).replace(/^\s+|\s+$/g, '');;
-        REPO_URL = `https://github.com/${student}/${REPO_NAME}`;
+        REPO_URL = `git@github.com:${student}/${REPO_NAME}.git`;
         this.msg_ok = `Se ha encontrado el fichero 'git_account': ${student}`;
         should.exist(student);
     });
