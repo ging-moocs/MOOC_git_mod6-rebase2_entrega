@@ -1,6 +1,5 @@
 
 <img  align="left" width="150" style="float: left;" src="https://www.upm.es/sfs/Rectorado/Gabinete%20del%20Rector/Logos/UPM/CEI/LOGOTIPO%20leyenda%20color%20JPG%20p.png">
-<img  align="right" width="150" style="float: right;" src="https://miriadax.net/miriadax-theme/images/custom/logo_miriadax_new.svg">
 
 <br/><br/><br/>
 
@@ -232,36 +231,26 @@ A continuación, en el directorio `MOOC_git_mod6-rebase2_entrega` guarde en un f
 echo "mi_nombre_de_usuario_en_github" >> git_account
 ```
 
-Para instalar y hacer uso de la [herramienta de autocorrección](https://www.npmjs.com/package/autocorector) en el ordenador local, ejecuta los siguientes comandos en el directorio del proyecto:
+Existe [una presentación](https://docs.google.com/presentation/d/e/2PACX-1vRYA9npW0Xg_c6_SWg2jAU7L2ti83-GY1VYKTzM1U5AgsW-0BC3xbwi__gsrsZ50Md0ja2HyadNzEPn/pub?start=false&loop=false&delayms=5000&slide=id.gf07f9a5896_4_1897) al principio del curso sobre cómo trabajar con el autocorector y poder corregir las prácticas con facilidad. Consulta esa presentación si tienes alguna duda.
+Para instalar y hacer uso de la herramienta de autocorrección en el ordenador local, ejecuta los siguientes comandos en el directorio del proyecto:
 
 ```
-$ sudo npm install -g autocorector  ## Instala el programa de test
-$ autocorector                      ## Pasa los tests al fichero a entregar
-............................        ## en el directorio de trabajo
-... (resultado de los tests)
-```
-También se puede instalar como paquete local, en el caso de que no se dispongas de permisos en el ordenador desde el que estás trabajando:
-```
-$ npm install autocorector     ## Instala el programa de test
-$ npx autocorector             ## Pasa los tests al fichero a entregar
-............................   ## en el directorio de trabajo
+$ npx autocorector                    ## Pasa los tests al fichero a entregar
+............................      ## en el directorio de trabajo
 ... (resultado de los tests)
 ```
 
-Se puede pasar la herramienta de autocorrección tantas veces como se desee sin ninguna repercusión en la calificación.
+Se puede pasar la herramienta de autoorrección tantas veces como se desee sin ninguna repercusión en la calificación.
 
 ## Instrucciones para la Entrega y Evaluación.
 
 Una vez satisfecho con su calificación, el alumno puede subir su entrega a MiriadaX con el siguiente comando:
 ```
-$ autocorector --upload
-```
-o, si se ha instalado como paquete local:
-```
 $ npx autocorector --upload
 ```
 
 La herramienta de autocorrección preguntará por el correo del alumno y el token de MiriadaX. En [este enlace](https://docs.google.com/presentation/d/e/2PACX-1vRYA9npW0Xg_c6_SWg2jAU7L2ti83-GY1VYKTzM1U5AgsW-0BC3xbwi__gsrsZ50Md0ja2HyadNzEPn/pub?start=false&loop=false&delayms=5000) se proveen instrucciones para encontrar dicho token.
+
 
 
 **RÚBRICA:** La resolución de cada uno de estos puntos dará un el % indicado de la nota total: 
