@@ -7,7 +7,7 @@ const fs = require('fs-extra');
 
 // CONSTS
 const REPO_NAME = 'MOOC_git_mod6-tf_agenda';
-const PATH_ASSIGNMENT = path.resolve(path.join(__dirname, "../"));
+const PATH_ASSIGNMENT = path.resolve(path.join(__dirname, "../../"));
 const PATH_REPO = path.join(PATH_ASSIGNMENT, REPO_NAME);
 const BRANCH_NAME = "remotes/origin/corrected_tf_agenda";
 
