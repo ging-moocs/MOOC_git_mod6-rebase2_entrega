@@ -5,6 +5,8 @@
 
 # Módulo 6: Colaboración mediante GitHub - Entrega P2P: Rebase 2
 
+Versión: 28 de enero de 2024
+
 ## Objetivos
  * Ver nuevos usos de GitHub y de "git rebase"
  * Aprender a usar "git fork"
