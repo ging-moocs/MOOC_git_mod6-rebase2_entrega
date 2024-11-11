@@ -6,11 +6,11 @@
     "info": {
         "githubURL": "ging-moocs/MOOC_git_mod6-rebase2_entrega",
         "serverUrl": "https://moocbot.dit.upm.es/",
-        "courseId": "1600",
-        "assignmentId": "976"
+        "courseId": "153",
+        "assignmentId": "36"
     },
     "dependencies": {
-        "autocorector": "^3.1.3",
+        "autocorector": "^3.5.0",
         "fs-extra": "*",
         "simple-git": "*",
         "underscore": "*"
